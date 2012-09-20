@@ -39,6 +39,9 @@ BIBER	= biber
 RERUN = "(There were undefined references|Rerun to get (cross-references|the bars) right)"
 RERUNBIB = "No file.*\.bbl|Citation.*undefined"
 
+COPY = if test -r $(<:%.tex=%.toc); then cp $(<:%.tex=%.toc) $(<:%.tex=%.toc.bak); fi 
+RM = rm -f
+
 # Get the main latex documents (store them in SOURCES) as source files
 SOURCES	:= $(shell egrep -l '^[^%]*\\begin\{document\}' *.tex)
 
@@ -48,12 +51,14 @@ TARGETS	= $(SOURCES:%.tex=%.pdf)
 
 define run-pdflatex
 	# run latex
-	$(LATEX) $<
+	$(COPY);$(LATEX) $<
 	# run biber if necessary
 	egrep -c $(RERUNBIB) $(<:%.tex=%.log) > /dev/null && ($(BIBER) $(<:%.tex=%);$(LATEX) $<) ; true
 	# re-run latex if necessary 
-	egrep $(RERUN) $(<:%.tex=%.log) && ($(LATEX) $<) >/dev/null; true
-	egrep $(RERUN) $(<:%.tex=%.log) && ($(LATEX) $<) >/dev/null; true
+	egrep $(RERUN) $(<:%.tex=%.log) && ($(COPY);$(LATEX) $<) >/dev/null; true
+	egrep $(RERUN) $(<:%.tex=%.log) && ($(COPY);$(LATEX) $<) >/dev/null; true
+	if cmp -s $(<:%.tex=%.toc) $(<:%.tex=%.toc.bak); then true ;else $(LATEX) $< ; fi
+	$(RM) $(<:%.tex=%.toc.bak)
 	# Display relevant warnings
 	egrep -i "(Reference|Citation).*undefined" $(<:%.tex=%.log) ; true
 endef
