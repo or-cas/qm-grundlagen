@@ -1,7 +1,7 @@
 qm-grundlagen
 =============
 
-Repetitorium Grundlagen der Quantenmechanik
+Skript zum Repetitorium Grundlagen der Quantenmechanik
 
 Required:
 
