@@ -3,6 +3,7 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
+\usepackage{csquotes}
 
 \usepackage{graphicx}
 \usepackage{hyperref} % hyperref>=6.82a required
@@ -24,15 +25,32 @@
 %% TITLE PAGE
 \subject{Skript zum Repetitorium}
 \title{Grundlagen der Quantenmechanik}
-\author{Hildegard Uecker\thanks{Universit\"at Wien, \href{mailto:hildegard.uecker@univie.ac.at}{hildegard.uecker@univie.ac.at}} \and Andreas Sorge\thanks{Network Dynamics Group, MPI f\"ur Dynamik und Selbstorganisation, \href{mailto:as@ds.mpg.de}{as@ds.mpg.de}}}
-\publishers{Organisation zur Erforschung komplexer adaptiver Systeme (or-cas) e.V.}
+\author{Hildegard Uecker \and Andreas Sorge}
+\publishers{Organisation zur Erforschung komplexer adaptiver Systeme (or-cas)}
 
 \uppertitleback{
+\begin{tabbing}
+Mathematics and BioSciences Group \quad \= Network Dynamics Group \kill
+ \begin{large}Hildegard Uecker\end{large} \> \begin{large}Andreas Sorge\end{large} \\[0.1cm]
+ Universit\"at Wien \> MPI f\"ur Dynamik und Selbstorganisation \\
+Mathematics and BioSciences Group \> Network Dynamics Group \\
+Nordbergstra\ss{}e 15 \> Bunsenstra\ss{}e 10 \\
+1090 Wien \> 37073 G\"ottingen \\
+\"Osterreich \> Deutschland \\[0.25cm]
+\href{mailto:hildegard.uecker@univie.ac.at}{hildegard.uecker@univie.ac.at} \> \href{mailto:as@ds.mpg.de}{as@ds.mpg.de}
+\end{tabbing}
+
+\vspace{1cm}
+Dieses Skript basiert teilweise auf Vorlagen von Christian K\"ohler, Maria Lenius, Rene Schulz, Christoph Solveen und Fabian Stiewe.
+
+\vspace{1cm}
 Dieses Skript wird gepflegt auf GitHub. \\
 \url{https://github.com/or-cas/qm-grundlagen}
 }
 
-\lowertitleback{
+\lowertitleback{Organisation zur Erforschung komplexer adaptiver Systeme (or-cas) e.V.
+\vspace{1cm}
+
 \href{http://creativecommons.org/licenses/by-nc-sa/3.0/de/}{\includegraphics{by-nc-sa-eu}}
 
 Dieses Werk ist unter einer Creative Commons Lizenz vom Typ Namensnennung -- Nicht-kommerziell -- Weitergabe unter gleichen Bedingungen 3.0 Deutschland zugänglich. Um eine Kopie dieser Lizenz einzusehen, konsultieren Sie \url{http://creativecommons.org/licenses/by-nc-sa/3.0/de/} oder wenden Sie sich brieflich an Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
@@ -41,6 +59,8 @@ Dieses Werk ist unter einer Creative Commons Lizenz vom Typ Namensnennung -- Nic
 \maketitle
 
 \chapter*{Vorwort}
+
+\input{vorwort}
 
 \tableofcontents
 
