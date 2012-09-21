@@ -11,3 +11,5 @@ Kontakt: hildegard.uecker@univie.ac.at, as@ds.mpg.de
 ## Systemvoraussetzungen
 
 * hyperref>=6.82a
+* biber
+* biblatex (logreq, etoolbox)

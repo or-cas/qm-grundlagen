@@ -75,10 +75,10 @@ endef
 all 	: $(TARGETS)
 
 clean	:
-	  -rm -f $(TARGETS) $(TARGETS:%.pdf=%.aux) $(TARGETS:%.pdf=%.bbl) $(TARGETS:%.pdf=%.blg) $(TARGETS:%.pdf=%.bcf) $(TARGETS:%.pdf=%.run.xml) $(TARGETS:%.pdf=%.log) $(TARGETS:%.pdf=%.out) $(TARGETS:%.pdf=%.idx) $(TARGETS:%.pdf=%.ilg) $(TARGETS:%.pdf=%.ind) $(TARGETS:%.pdf=%.toc) $(TARGETS:%.pdf=%.d)
+	  -rm -f $(TARGETS) $(TARGETS:%.pdf=%.aux) $(TARGETS:%.pdf=%.bbl) $(TARGETS:%.pdf=%.blg) $(TARGETS:%.pdf=%.bcf) $(TARGETS:%.pdf=%.run.xml) $(TARGETS:%.pdf=%.log) $(TARGETS:%.pdf=%.out) $(TARGETS:%.pdf=%.idx) $(TARGETS:%.pdf=%.ilg) $(TARGETS:%.pdf=%.ind) $(TARGETS:%.pdf=%.toc) $(TARGETS:%.pdf=%.d) $(TARGETS:%.pdf=%.toc.bak)
 
 veryclean	: clean
-	  -rm -f *.log *.aux *.dvi *.bbl *.blg *.ilg *.toc *.lof *.lot *.idx *.ind *.ps  *~ *.backup *.d *.run.xml *.bcf *.pdf
+	  -rm -f *.log *.aux *.dvi *.bbl *.blg *.ilg *.toc *.lof *.lot *.idx *.ind *.ps  *~ *.backup *.d *.run.xml *.bcf
 
 # This is a rule to generate a file of prerequisites for a given .tex file
 %.d	: %.tex
