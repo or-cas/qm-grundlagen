@@ -3205,7 +3205,7 @@ endif
 #	Usually we can force this by simply removing the generated pdf file and
 #	not creating a .1st.make file..
 #
-%.$(build_target_extension).1st.make %.d %.aux %.aux.make %.fls %.bcf: %.tex
+%.$(build_target_extension).1st.make %.d %.aux %.aux.make %.fls: %.tex
 	$(QUIET)$(call echo-build,$<,$*.d $*.$(build_target_extension).1st.make,$(RESTARTS)-1)
 	$(QUIET)\
 	$(call set-run-reason,need to build .d and .$(build_target_extension).1st.make); \
