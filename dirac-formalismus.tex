@@ -1,3 +1,120 @@
-\subsection{Der quantenmechanische Zustand}
+\subsection{Der quantenmechanische Zustand (ket-Vektoren)}
 
-Der sequentielle Stern-Gerlach-Versuch widerlegt unsere klassische Intuition: physikalische Messungen ver\"andern n\"amlich im Allgemeinen den Zustand unseres Systems! Ein weiterer Widerspruch zu unserer klassischen Intuition ist, dass wir nicht alle physikalischen Gr\"o\ss{}en gleichzeitig messen k\"onnen. Wir k\"onnen daher nicht alles gleichzeitig \"uber einen Zustand wissen. Wir definieren daher nach \textcite{Nolting}:
+Der sequentielle Stern-Gerlach-Versuch widerlegt unsere klassische Intuition: physikalische Messungen ver\"andern n\"amlich im Allgemeinen den Zustand unseres Systems! Ein weiterer Widerspruch zu unserer klassischen Intuition ist, dass wir nicht alle physikalischen Gr\"o\ss{}en gleichzeitig messen k\"onnen. Wir k\"onnen daher nicht alles gleichzeitig \"uber einen Zustand wissen.
+
+Wir definieren daher nach \textcite{Nolting}:
+
+\begin{post}
+ Gleichzeitige Messung eines maximalen Satzes von \enquote{vertr\"aglichen}, d.h. simultan messbaren, Eigenschaften \enquote{pr\"apariert} einen \enquote{reinen} quantenmechanischen Zustand.
+\end{post}
+
+\begin{bsp}
+ Bez\"uglich des Elektronenspins haben wir bereits (reine) Zust\"ande kennengelernt: \szus\ und \szds.
+\end{bsp}
+
+Wie k\"onnen wir nun mit diesen abstrakten quantenmechanischen Zust\"anden rechnen, also konkrete physikalische Vorhersagen treffen?
+
+\begin{post}
+ In der Quantenmechanik wird ein physikalisches System durch einen \emph{Zustandsvektor} \keta\ in einem komplexen Vektorraum, einem sogenannten Hilbertraum \hs, repr\"asentiert. \keta\ enth\"alt die gesamte Information \"uber den physikalischen Zustand. 
+\end{post}
+
+Nach Dirac nennen wir einen Zustandsvektor \keta\ auch \emph{ket-Vektor} (kurz: \emph{ket}), und den Hilbertraum \emph{ket-Raum}.
+
+Wie Vektoren k\"onnen wir kets $\keta, \ketb \in \hs$ addieren, die Summe ist wieder ein ket:
+\begin{equation*}
+ \keta + \ketb = \ket{\gamma} \in \hs
+\end{equation*}
+Wie ein Vektor l\"asst sich auch ein ket mit einer komplexen Zahl $c \in \comps$ multiplizieren, und wir erhalten wieder ein ket:
+\begin{equation*}
+ c \keta = \keta c \in \hs
+\end{equation*}
+
+\begin{post}
+ $\keta$ und $c \keta$ mit $c \neq 0$ sind zwar zwei verschiedene Elemente im ket-Raum \hs, repr\"asentieren aber den selben physikalischen Zustand.
+\end{post}
+
+\subsection{Observablen}
+Wie k\"onnen wir nun konkret etwas \"uber unser physikalisches System erfahren, das durch einen abstrakten Zustandsvektor repr\"asentiert wird? Durch messbare physikalische Gr\"o\ss{}en:
+
+\begin{post}
+ Messbare physikalische Gr\"o\ss{}en (\emph{Observablen}) werden durch lineare Abbildungen (\emph{Operatoren}) auf dem ket-Raum repr\"asentiert.
+\end{post}
+Eine Observable $A$ wird also repr\"asentiert durch den Operator $\op{A}: \hs \rightarrow \hs$, $\op{A}( \keta) \equiv \op{A} \keta \equiv A \keta \in \hs$ ist wieder ein ket.
+\begin{konv}
+ Mit der Schreibweise $A$ ist oft der Operator $\op{A}$ der Observablen $A$ gemeint!
+\end{konv}
+Im Allgemeinen ist das ket $\op{A} \keta$ nicht gleich einer komplexen Zahl multipliziert mit $\keta$! Aber:
+\begin{defn}
+Die Eigenvektoren $\ket{a_i}$ der linearen Abbildung $\op{A}$ bezeichnen wir auch als \emph{Eigenkets} oder \emph{Eigenzust\"ande} des physikalischen Systems bez\"uglich der Observablen $A$, mit den jeweiligen Eigenwerten $a_i \in \comps$:
+\begin{equation*}
+ \op{A} \ket{a_i} = a_i \ket{a_i}
+\end{equation*}
+\end{defn}
+
+\begin{bsp}
+ Spin-$\frac{1}{2}$-Systeme haben bez\"uglich der $z$-Richtung die Eigenvektoren \szus\ und \szds\ mit den Eigenwerten $+\hbarh$ und $-\hbarh$:
+ \begin{align*}
+  \szop \szus &= + \hbarh \szus \\
+  \szop \szds &= - \hbarh \szds \\
+  \text{oder auch:} \quad \szop \szs &= \pm \hbarh \szs
+ \end{align*}
+
+\end{bsp}
+
+\begin{post}
+ Gegeben sei eine Observable $A$ mit den Eigenzust\"anden $\ket{a_i}$. Wir k\"onnen jeden Zustandsvektor $\keta$ nach diesen Eigenzust\"anden entwickeln, sprich als Summe der Eigenzust\"ande mit komplexen Vorfaktoren $c_i \in \comps$ schreiben:
+\begin{equation}
+ \keta = \sum_i c_i \ket{a_i}
+\end{equation}
+Wir sagen auch: Die Eigenzust\"ande $\ket{a_i}$ spannen den Ketraum $\hs$ auf.
+\end{post}
+
+\subsection{Duale Zustandsvektoren (bras) und Skalarprodukt}
+\begin{post}
+ Zu jedem Zustandsvektor $\keta \in \hs$ existiert ein \emph{duales} ket $\braa \in \ds{\hs}$ im Dualraum von \hs, dem Raum \ds{\hs}\ der linearen Abbildungen $\hs \rightarrow \comps$. Wir bezeichnen $\braa$ auch als das zum ket $\keta$ korrespondierende \emph{bra} (oder den \emph{bra-Vektor}), und \ds{\hs}\ als \emph{bra-Raum}, und schreiben:
+\begin{equation}
+ \keta \dc \braa
+\end{equation}
+ Wir postulieren weiterhin, dass wir mit den korrespondierenden bras wie mit den kets rechnen k\"onnen:
+\begin{equation}
+ c_{\alpha} \keta + c_{\beta} \ketb \dc \cc{c_{\alpha}} \braa + \cc{c_{\beta}} ,
+\end{equation}
+wobei die Vorfaktoren durch duale Korrespondenz komplex konjugiert werden!
+\end{post}
+
+\begin{post}
+ Um die Dirac'sche bra-ket-Notation zu vollenden, postulieren wir nun noch das \emph{innere Produkt} (Skalarprodukt) $\braket{\beta | \alpha} \in \comps$ eines bras $\brab$ und eines kets $\keta$:
+\begin{equation}
+ \braket{\beta | \alpha} \equiv \brab \cdot \keta \equiv \brab ( \keta ) \in \comps
+\end{equation}
+Das innere Produkt habe folgende Eigenschaften:
+\begin{align}
+ \braket{\beta | \alpha} &= \cc{\braket{\alpha | \beta}} \\
+\braket{\alpha | \alpha} &\geq 0 \qquad \text{\enquote{positiv definit}} 
+\end{align}
+
+\end{post}
+ 
+\begin{defn}
+ Wir nennen zwei physikalische Zust\"ande bzw. ihre repr\"asentierenden Zustandsvektoren \keta, \ketb, \emph{orthogonal}, wenn gilt $\braket{\beta | \alpha} = 0$.
+\end{defn}
+\begin{notiz}
+ \begin{equation}
+  \braket{\beta | \alpha} = 0 \Leftrightarrow \braket{\alpha | \beta} = 0
+ \end{equation}
+\end{notiz}
+
+\begin{defn}
+ Wir nennen einen Zustandsvektor \keta\ \emph{normalisiert}, wenn $\braket{\alpha | \alpha} = 1$ gilt.
+\end{defn}
+\begin{konv}
+ Da ein physikalischer Zustand von einem ket nur bis auf einen komplexen Vorfaktor festgelegt ist, k\"onnen wir festlegen, dass wir im folgenden nur noch normalisierte Zustandsvektoren betrachten.
+\end{konv}
+
+\subsection{Operatoren}
+Wenden wir uns nun wieder den Operatoren zu, und zwar ganz allgemein linearen Abbildungen auf dem Ketraum \hs, nicht nur solchen, die physikalisch messbaren Gr\"o\ss{}en (Observablen) entsprechen.
+
+\begin{defn}
+ Zwei Operatoren $\opx, \opy$ sind gleich, $\opx=\opy$, wenn $\opx \keta = \opy \keta$ f\"ur alle kets $\keta$ gilt.
+\end{defn}
+
