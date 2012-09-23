@@ -31,3 +31,5 @@
 *~
 *.bcf
 *.run.xml
+*.make
+*.fls

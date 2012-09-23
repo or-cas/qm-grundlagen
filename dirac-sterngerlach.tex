@@ -1,0 +1,82 @@
+\emph{Der Stern-Gerlach-Versuch offenbart das Paradigma der Quantenmechanik: Zwei"=Zustands"=Systeme, bei denen die Quantenmechanik unserer liebgewordenen klassischen Intuition und Interpretation am meisten widerspricht!}
+
+\subsection{Aufbau und gemessene Gr\"o\ss{}en}
+\begin{figure}
+\href{http://commons.wikimedia.org/wiki/File:Stern-Gerlach_Experiment_de.png?uselang=de}{\includegraphics[width=\textwidth]{sterngerlach}}
+\caption{\label{fig:SG}Der Stern-Gerlach-Versuch (1922). \href{http://commons.wikimedia.org/wiki/File:Stern-Gerlach_Experiment_de.png?uselang=de}{Grafik: Theresa Knott, Wikimedia Commons}, \href{http://creativecommons.org/licenses/by-sa/3.0/deed.de}{lizenziert unter CreativeCommons-Lizenz by-sa-3.0}.}
+\end{figure}
+
+Im in \figurename~\ref{fig:SG} gezeigten und 1922 in Frankfurt a.M.\ durchgef\"uhrten Experiment von Otto Stern und Walther Gerlach werden ungeladene Silberatome in einem Ofen erhitzt. Der aus dem Ofen austretende Strahl ungeladener Silberatome durchl\"auft ein inhomogenes Magnetfeld und trifft auf einen Schirm, auf dem die Intensit\"atsverteilung gemessen wird. Mit der Intensit\"atsverteilung messen wir die Ablenkung der Silberatome im Magnetfeld.
+
+\begin{frage}
+ Welche Kraft wirkt auf ein ungeladenes Silberatom in einem inhomogenen Magnetfeld?
+\end{frage}
+\begin{antw}
+Da sie ungeladen sind, wirkt keine Lorentzkraft. Jedes Atom besitzt allerdings ein $5s$-Elektron mit einem Eigendrehimpuls, dem Spin \spin\ mit dem Betrag \hbarh. (Die Drehimpulse der anderen 46 Elektronen heben sich gegenseitig auf.) Daher weist das \emph{Leuchtelektron} und somit das gesamte Atom ein magnetisches Moment \magnmom\ parallel und proportional zum Spin auf: $\magnmom \propto \spin$. Der Betrag des magnetischen Moments des Elektrons (und damit hier des gesamten Atoms) ist das Bohrsche Magneton $\bohrmag = \frac{e}{2m_e}\hbar = |\magnmom|$.
+\end{antw}
+
+\begin{frage}
+ Wie sieht die Formel der Kraft aus, die auf ein magnetisches Moment \magnmom\ in einem Magnetfeld \magnf\ wirkt?
+\end{frage}
+\begin{antw}
+ Auf ein magnetisches Moment \magnmom\  im (inhomogenen) Magnetfeld \magnf\ wirkt eine Kraft $\mathbf{F} = \nabla (\magnmom \cdot \magnf)$. Wir nehmen an, dass sich das Magnetfeld nur in $z$-Richtung \"andert, sodass $\mathbf{F} = (0,0,F)$ auch nur eine Komponente in $z$-Richtung hat, mit dem Betrag $F= \magnmomm \frac{\partial \magnfm}{\partial z} \cos \alpha$. Hier ist $\alpha = \sphericalangle(\magnmom, \magnf)$ der (konstante) Winkel zwischen magnetischem Moment und Magnetfeld.
+\end{antw}
+
+\begin{frage}
+ Was misst der Stern-Gerlach-Apparat effektiv?
+\end{frage}
+\begin{antw}
+ Der Stern-Gerlach-Aufbau misst effektiv die Verteilung der Ausrichtungen $\alpha = \sphericalangle(\magnmom, \magnf)$ der magnetischen Momente der Silberatome zum magnetischen Feld. Genauer gesagt misst der Stern-Gerlach-Aufbau die $z$-Komponente $\magnmomm_z$ des magnetischen Moments jedes Silberatoms, und damit die $z$-Komponente $\spinm_z$ des Spins des Leuchtelektrons.
+\end{antw}
+
+
+Die magnetischen Momente \magnmom\ der Silberatome aus dem Ofen sind vor Eintritt in das Magnetfeld zuf\"allig in alle Richtungen orientiert.
+
+\begin{frage}
+ Welche qualitative Intensit\"atsverteilung erwarten Sie daher auf dem Schirm?
+\end{frage}
+\begin{antw}
+ Klassisch erwarten wir eine \emph{kontinuierliche} Verteilung zwischen den maximalen Auslenkungen, die gerade der vollst\"andigen Ausrichtung des magnetischen Moments entlang der $z$-Richtung entsprechen ($\magnmomm_z = \pm |\magnmom|$). Wegen der zuf\"alligen Orientierung der magnetischen Momente kommen auch dazwischen alle Werte vor.
+\end{antw}
+
+\begin{erg}
+ Tats\"achlich beobachten wir im Stern-Gerlach-Experiment, dass der Strahl im Apparat aufgespalten wird und wir zwei \emph{diskrete} Komponenten $z_+$ und $z_-$ erhalten, die gerade den vollst\"andigen Ausrichtungen der magnetischen Momente entsprechen!
+
+Nach der Messung erhalten wir also zwei getrennte Teilstrahlen mit nur den beiden diskreten Werten $\spinm_z = +\hbarh$ and $\spinm_z = -\hbarh$ f\"ur den Spin.
+\end{erg}
+
+
+\begin{zfrage}
+ Warum richten sich nicht schon klassisch gesehen alle magnetischen Momente im Magnetfeld aus? 
+\end{zfrage}
+\begin{antw}
+ Magnetische Momente von ruhenden K\"orpern (Stabmagnete z.B.) richten sich in der Tat am Magnetfeld aus. Elektronenspins stehen aber f\"ur eine Eigen\emph{rotation}, und magnetische Momente \magnmom\ rotierender K\"orper behalten ihren Winkel zur Feldrichtung \magnf: sie richten sich nicht aus, sondern pr\"azessieren (wie ein mechanischer Kreisel) unter dem Drehmoment $\magnmom \times \magnf$ um die durch die Feldrichtung \magnf\ gegebene Achse. Dabei bleibt der Winkel zu dieser Achse konstant. W\"urden sich die Elektronenspins tats\"achlich im Magnetfeld ausrichten, m\"ussten zudem alle in Richtung des Magnetfeldes zeigen, und keiner in entgegengesetzte Richtung (wie es aber beim Stern-Gerlach-Experiment beobachtet wird).
+\end{antw}
+
+\subsection{Hintereinanderschaltung von Stern-Gerlach-Apparaturen}
+\begin{frage}
+ Was erwarten Sie (klassisch): Welche Teilstrahlen treten auf, wenn der $z_-$-Teilstrahl aus einem Stern-Gerlach-Apparat $\sg_z$ blockiert wird und nur der $z_+$-Teilstrahl in einen weiteren Stern-Gerlach-Apparat $\sg_z$ geschickt wird?
+\end{frage}
+\begin{obs}
+ Siehe \figurename{}~\ref{fig:seqSQ} oben: Es \"andert sich nichts. Die Spins bleiben in $z_+$-Richtung ausgerichtet.
+\end{obs}
+
+\begin{frage}
+ Der $z_+$-Teilstrahl aus einer Stern-Gerlach-Apparatur $\sg_z$ wird in einer in $x$-Richtung angeordneten Stern-Gerlach-Apparatur $\sg_x$ wieder zur H\"alfte in zwei Komponenten $x_+$ und $x_-$ aufgeteilt, siehe \figurename{}~\ref{fig:seqSQ} Mitte. Wie erkl\"aren Sie sich dieses Ergebnis?
+\end{frage}
+Man k\"onnte klassisch vermuten, dass die Spins der Leuchtelektronen der Silberatome im $z_+$-Strahl je zur H\"alfte durch $\spinm_z = +\hbarh, \spinm_x = +\hbarh$ und $\spinm_z = +\hbarh, \spinm_x = -\hbarh$ bestimmt sind.
+
+Aber:
+\begin{obs}
+Schickt man nur den $x_+$-Teilstrahl aus einer Stern-Gerlach-Apparatur $\sg_x$, der nur aus dem $z_+$-Teilstrahl einer $\sg_z$-Apparatur gewonnen wurde, erneut durch eine $\sg_z$-Apparatur, so spaltet sich dieser erneut je zur H\"alfte in $z_+$ und $z_-$ auf!
+\end{obs}
+
+Willkommen in der Quantenmechanik! Denn:
+\begin{erg}
+ Die Messung von $\spinm_x$ durch die $\sg_x$-Apparatur verbunden mit der Selektion des $x_+$-Zustands vernichtet alle vorherige Information \"uber den Zustand $z_+$. $\spinm_z$ und $\spinm_x$ lassen sich nicht gleichzeitig bestimmen!
+\end{erg}
+
+\begin{figure}
+ \href{http://commons.wikimedia.org/wiki/File:Sg-seq.svg}{\includegraphics[width=\textwidth]{sequentieller-sterngerlach}}
+\caption{\label{fig:seqSQ}Sequentielle Stern-Gerlach-Versuche. \href{http://commons.wikimedia.org/wiki/File:Sg-seq.svg}{Grafik: Francesco Versaci, Wikimedia Commons}, Public Domain.}
+\end{figure}
