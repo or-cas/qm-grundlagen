@@ -22,6 +22,14 @@
 % Stern Gerlach apparatus
 \newcommand{\SternGerlach}{\ensuremath{\text{SG}}} \newcommand{\sg}{\SternGerlach}
 
+% Ket
+\let\origket\ket % avoids recursion in renewcommand!
+\renewcommand{\ket}[1]{\ensuremath{{\origket{#1}}}} % reduces space
+
+% Bra
+\let\origbra\bra % avoids recursion in renewcommand!
+\renewcommand{\bra}[1]{\ensuremath{{\origbra{#1}}}} % reduces space
+
 % S_z + state
 \newcommand{\SpinZUpState}{\ensuremath{\ket{+}}} \newcommand{\szus}{\SpinZUpState}
 % S_z - state
@@ -42,19 +50,21 @@
 \newcommand{\SpinZOperator}{\ensuremath{\op{\SpinMagnitude}_z}} \newcommand{\szop}{\SpinZOperator}
 
 % Dualraum
-\newcommand{\DualSpace}[1]{\ensuremath{{#1}^*}} \newcommand{\ds}[1]{\DualSpace{#1}}
+\newcommand{\DualSpace}[1][\HilbertSpace]{\ensuremath{{#1}^*}} \newcommand{\ds}[1][\HilbertSpace]{\DualSpace[#1]}
 
 % Duale Korrespondenz
 \newcommand{\DualCorrespondence}{\ensuremath{\overset{\text{DC}}{\leftrightarrow}}} \newcommand{\dc}{\DualCorrespondence}
 
 % alpha ket
 \newcommand{\AlphaKet}{\ensuremath{\ket{\alpha}}} \newcommand{\keta}{\AlphaKet}
+\newcommand{\AlphaKetCoefficient}{\ensuremath{c_{\alpha}}} \newcommand{\ca}{\AlphaKetCoefficient}
 
 % alpha bra
 \newcommand{\AlphaBra}{\ensuremath{\bra{\alpha}}} \newcommand{\braa}{\AlphaBra}
 
 % beta ket
 \newcommand{\BetaKet}{\ensuremath{\ket{\beta}}} \newcommand{\ketb}{\BetaKet}
+\newcommand{\BetaKetCoefficient}{\ensuremath{c_{\beta}}} \newcommand{\cb}{\BetaKetCoefficient}
 
 % beta bra
 \newcommand{\BetaBra}{\ensuremath{\bra{\beta}}} \newcommand{\brab}{\BetaBra}
@@ -63,6 +73,16 @@
 \newcommand{\ComplexConjugate}[1]{\ensuremath{{#1}^*}} \newcommand{\cc}[1]{\ComplexConjugate{#1}}
 
 % X Operator
-\newcommand{\OperatorX}{\ensuremath{\op{X}}} \newcommand{\opx}{\OperatorX}
+\newcommand{\OperatorX}{\ensuremath{\Operator{X}}} \newcommand{\opx}{\OperatorX}
 % Y Operator
-\newcommand{\OperatorY}{\ensuremath{\op{Y}}} \newcommand{\opy}{\OperatorY}
+\newcommand{\OperatorY}{\ensuremath{\Operator{Y}}} \newcommand{\opy}{\OperatorY}
+
+% hermitian adjoint
+\newcommand{\Hermitian}[1]{\ensuremath{{#1}^{\dag}}}
+
+\newcommand{\OperatorXHermitian}{\ensuremath{\Hermitian{\OperatorX}}} \newcommand{\opxh}{\OperatorXHermitian}
+
+% Operator x ket
+% \newcommand{\OperatorKet}[2]{\ensuremath{{#1}\negthinspace{#2}}} \newcommand{\opk}[2]{\OperatorKet{#1}{#2}}
+% bra x Operator
+% \newcommand{\BraOperator}[2]{\ensuremath{{#1}{#2}}} \newcommand{\bop}[2]{\BraOperator{#1}{#2}}

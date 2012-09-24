@@ -39,7 +39,7 @@ Wie k\"onnen wir nun konkret etwas \"uber unser physikalisches System erfahren, 
 \begin{post}
  Messbare physikalische Gr\"o\ss{}en (\emph{Observablen}) werden durch lineare Abbildungen (\emph{Operatoren}) auf dem ket-Raum repr\"asentiert.
 \end{post}
-Eine Observable $A$ wird also repr\"asentiert durch den Operator $\op{A}: \hs \rightarrow \hs$, $\op{A}( \keta) \equiv \op{A} \keta \equiv A \keta \in \hs$ ist wieder ein ket.
+Eine Observable $A$ wird also repr\"asentiert durch den Operator $\op{A}: \hs \rightarrow \hs$, $\op{A}( \keta) \equiv \op{A}\keta \equiv A \keta \in \hs$ ist wieder ein ket.
 \begin{konv}
  Mit der Schreibweise $A$ ist oft der Operator $\op{A}$ der Observablen $A$ gemeint!
 \end{konv}
@@ -105,16 +105,66 @@ Das innere Produkt habe folgende Eigenschaften:
 \end{notiz}
 
 \begin{defn}
- Wir nennen einen Zustandsvektor \keta\ \emph{normalisiert}, wenn $\braket{\alpha | \alpha} = 1$ gilt.
+ Wir nennen einen Zustandsvektor \keta\ \emph{normiert}, wenn $\braket{\alpha | \alpha} = 1$ gilt.
 \end{defn}
 \begin{konv}
- Da ein physikalischer Zustand von einem ket nur bis auf einen komplexen Vorfaktor festgelegt ist, k\"onnen wir festlegen, dass wir im folgenden nur noch normalisierte Zustandsvektoren betrachten.
+ Da ein physikalischer Zustand von einem ket nur bis auf einen komplexen Vorfaktor festgelegt ist, k\"onnen wir festlegen, dass wir im folgenden nur noch normierte Zustandsvektoren betrachten.
 \end{konv}
 
 \subsection{Operatoren}
 Wenden wir uns nun wieder den Operatoren zu, und zwar ganz allgemein linearen Abbildungen auf dem Ketraum \hs, nicht nur solchen, die physikalisch messbaren Gr\"o\ss{}en (Observablen) entsprechen.
 
-\begin{defn}
+\begin{eig}
+Auf ein ket \keta\ wirkt ein Operator \opx\ ganz normal \enquote{von links}, d.h. $\opx(\keta) \equiv \opx \keta \in \hs$ ist wieder ein ket.
+\end{eig}
+
+\begin{eig}
+ Wie Funktionen auf den reellen Zahlen auch werden Operatoren dar\"uber definiert, wie sie auf (alle) kets wirken.
+\end{eig}
+
+\begin{bsp}
  Zwei Operatoren $\opx, \opy$ sind gleich, $\opx=\opy$, wenn $\opx \keta = \opy \keta$ f\"ur alle kets $\keta$ gilt.
+\end{bsp}
+
+\begin{eig}
+Operatoren lassen sich \enquote{wie Zahlen} zu neuen Operatoren addieren, kommutativ und assoziativ:
+\begin{align}
+\opx + \opy &= \opy + \opx \\
+\opx + (\opy + \op{Z}) &= (\opx + \opy) + \op{Z}
+\end{align}
+\end{eig}
+
+\begin{eig}
+ Operatoren sind linear:
+ \begin{equation}
+  \opx(\ca \keta + \cb \ketb) = \ca \opx \keta + \cb \opx \ketb
+ \end{equation}
+\end{eig}
+
+\begin{eig}
+Operatoren wirken auch auf bras, und zwar \emph{von rechts}!
+\begin{equation}
+\opx(\braa) \equiv \braa \opx \in \ds
+\end{equation} 
+$\braa\opx$ ist wieder ein bra!
+\end{eig}
+
+\begin{notiz}
+ Im Allgemeinen korrespondiert das bra $\braa \opx$ nicht mit dem ket $\opx \keta$! Aber:
+\end{notiz}
+
+\begin{defn}
+ Sei \opx\ ein Operator. Der zu \opx\ \emph{hermitesch adjungierte Operator} oder auch einfach \emph{adjungierte Operator} \opxh\ sei f\"ur alle kets \keta\ definiert \"uber die duale Korrespondenz
+ \begin{equation}
+  \opx \keta \dc \braa \opxh
+ \end{equation}
+
 \end{defn}
 
+\begin{defn}
+ Gilt f\"ur einen Operator $\opxh = \opx$, d.h. $\opx \keta \dc \braa \opx$ f\"ur alle kets \keta, so hei\ss{}t \opx\ \emph{hermitesch}.
+\end{defn}
+
+\begin{eig}
+ Wir k\"onnen Operatoren multiplizieren, d.h. hintereinander auf einen Zustandsvektor \keta\ anwenden, und wieder ein ket erhalten: $\opy \opx \keta \equiv \opy ( \opx \keta) \in \hs$.
+\end{eig}

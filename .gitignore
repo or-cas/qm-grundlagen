@@ -33,3 +33,4 @@
 *.run.xml
 *.make
 *.fls
+*.kate-swp
