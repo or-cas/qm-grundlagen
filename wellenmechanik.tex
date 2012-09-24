@@ -1,0 +1,248 @@
+%\usepackage{bbm}
+%\usepackage{color}
+%\usepackage{caption}
+%\usepackage{psfrag}
+%\usepackage{esint}
+% \parindent0em
+% \parskip1.5ex plus0.5ex minus0.5ex
+% \topmargin4mm
+% \headheight5mm
+% \headsep6mm
+% \topskip5mm
+% \textwidth170mm
+% \evensidemargin5mm
+% \oddsidemargin5mm
+% \textheight210mm
+% \hoffset -10mm
+% \footskip20mm
+
+%\renewcommand{\textfraction}{0}
+%\renewcommand \thesection {\Roman{section}}
+%\newcommand{\eps}{\epsilon}
+%\newcommand{\qed}{\begin{flushright}$\square$\end{flushright}}
+
+\section{Die Wellenfunktion}
+
+Die Tatsache, da"s Teilchen Welleneigenschaften haben, legt es nahe, 
+Teilchen mit Hilfe von Wellen zu beschreiben. Spezielle Wellen sind
+die ebenen Wellen:
+\begin{equation}
+\label{eq::ebene_welle}
+	\Psi(\vec x,t) = A e^{i(\vec k \vec x -\omega t)}
+\end{equation}
+mit einer Dispersionsrelation $\omega = \omega(\vec k)$
+(Beispiel Lichtwelle: $\omega = c |\vec k|$).
+
+Ebene Wellen sind "uberall im Raum verteilt. Um ein lokalisiertes Teilchen
+zu beschreiben, mu"s man ebene Wellen zu sogenannten Wellenpaketen
+"uberlagern:
+\begin{equation}
+	\Psi(\vec x,t) = \frac{1}{\sqrt{2\pi}}\int \mathrm{d}^3k
+	\hat \Psi(\vec k)
+	e^{i(\vec k \vec x -\omega t)} = \frac{1}{\sqrt{2\pi}}
+	\int \mathrm{d}^3 k\hat \Psi(\vec k,t) e^{(i \vec k \vec x)}.
+\end{equation}
+Die Funktionen $\Psi$ und $\hat \Psi$ sind also gerade "uber die
+Fouriertransformation miteinander verbunden. 
+
+\section{Materiewellen}
+
+F"ur Materiewellen freier Teilchen
+gilt mit $E=\hbar \omega$, $\vec p = \hbar \vec k$ und
+$E = \frac{|\vec p|^2}{2m}$) die Dispersionsrelation:
+\begin{equation}
+	\omega(\vec k) = \frac{\hbar |\vec k|^2}{2m}.
+\end{equation}
+Ableiten der Funktion $\Psi(\vec x,t)$ liefert allgemein:
+\begin{align}
+	\frac{\partial }{\partial  t} \Psi(\vec x,t) &= 
+	\frac{1}{\sqrt{2\pi}}\int \mathrm{d}^3k
+        \hat \Psi(\vec k) (-i\omega)
+        e^{i(k \vec x -\omega t)}\\
+	\Delta \Psi(\vec x,t) &= \frac{1}{\sqrt{2\pi}}\int \mathrm{d}^3k
+        \hat \Psi(\vec k) (-|\vec k|^2)
+        e^{i(\vec k \vec x -\omega t)}.
+\end{align}
+Damit gilt f"ur Materiewellen mit obiger Dispersionsrelation:
+\begin{equation}
+	i\hbar \frac{\partial }{\partial  t} \Psi(\vec x,t)
+	= - \frac{\hbar^2}{2m} \Delta \Psi(\vec x,t).
+\end{equation}
+Die ist die \emph{Schr"odingergleichung f"ur freie Teilchen}.
+
+Was "andert sich f"ur Teilchen in einem Potential $U(\vec x)$?
+Es gilt nun $E=\hbar \omega= \frac{\vec p^2}{2m} + U(\vec x)$. Damit
+ergibt sich die Schr"odingergleichung:
+\begin{equation}
+	i\hbar \frac{\partial }{\partial  t} \Psi(\vec x,t)
+	= H \Psi(\vec x,t)
+\end{equation}
+mit dem Hamilton-Operator
+\begin{equation}
+	H = - \frac{\hbar^2}{2m}\Delta + U(\vec x).
+\end{equation}
+F"ur L"osungen der Schr"odingergleichung gilt:
+\begin{enumerate}
+	\item Superpositionsprinzip: Sind $\Psi$, $\phi$ L"osungen,
+	dann ist auch $\alpha \Psi + \beta \phi$ mit $\alpha,
+	\beta  \in \mathbb{C}$ eine L"osung.
+	\item Determiniertheit: Wenn wir $\Psi(\cdot,0)$ kennen, ist
+	durch die Schr"odingergleichung die Wellenfunktion zu allen
+	Zeiten bestimmt.
+	\item Erhaltungssatz: Es gilt $\int \mathrm{d}^3 x
+	|\Psi(\vec x,t)|^2 = const.$ (Beweis:
+	$\int \mathrm{d}^3 x
+        |\Psi(\vec x,t)|^2 = \int \mathrm{d}^3 k
+        |\Psi(\vec k,t)|^2 = \int \mathrm{d}^3 k
+        |\Psi(\vec k)e^{i\omega t}|^2 = \int \mathrm{d}^3 k
+        |\Psi(\vec k)|^2$, wobei wir die Parsevalsche Gleichung verwendet
+	haben.)	 
+\end{enumerate}
+
+\section{Interpretation der Wellenfunktion als Wahrscheinlichkeitsdichte}
+
+Das Betragsquadrat der normierten Wellenfunktion wird als 
+Wahrscheinlichkeitsdichte interpretiert, d.h. $|\Psi(\vec x,t)|^2\mathrm{d}^3x$
+gibt die Wahrscheinlichkeit an, das Teilchen zum Zeitpunkt $t$ in einem
+Volumenelement $\mathrm{d}^3 t$ am Ort $\vec x$ zu finden. 
+Entsprechend ist $|\hat \Psi(\vec k,t)|^2$ die
+Wahrscheinlichkeitsdichte f"ur den Wellenvektor (direkter Zusammenhang
+zum Impuls: $\vec p = \hbar \vec k$).
+
+Wir betrachten nun die zeitliche Entwicklung der Wahrscheinlichkeitsdichte:
+\begin{equation}
+\begin{split}
+	\frac{\partial }{\partial  t} |\Psi(\vec x,t)\Psi^*(\vec x,t)|^2
+	&= \dot \Psi \Psi^* + \Psi \dot \Psi^* =
+	-\frac{i}{\hbar} (\hat H\Psi) \Psi^* + \frac{i}{\hbar} 
+	\Psi(\hat H\Psi^*)\\
+	&= - \frac{i}{\hbar} \left[-\frac{\hbar^2}{2m}(\Delta \Psi)
+	+ U(\vec x) \Psi \right] \Psi^* + \frac{i}{\hbar} \Psi
+	\left[-\frac{\hbar^2}{2m}(\Delta \Psi^*)+U(\vec x)\Psi^* \right]\\
+	&=\frac{\hbar}{2mi} \left[(\Delta \Psi^*)\Psi - (\Delta \Psi)
+	\Psi^* \right].
+\end{split}
+\end{equation}
+Mit der Wahrscheinlichkeitsstromdichte $\vec j(\vec x,t) = \frac{\hbar}{2mi}
+\left[\Psi^*(\nabla \Psi) - (\nabla \Psi^*)\Psi \right]$ ergibt
+sich die Kontinuit"atsgleichung:
+\begin{equation}
+	\frac{\partial}{\partial t} \rho(\vec x,t) + \nabla \vec j(\vec x,t)=0
+\end{equation}
+mit
+\begin{equation}
+	\rho(\vec x,t) = |\Psi(\vec x,t)|^2.
+\end{equation}
+
+\section{Quantenmechanische Observablen}
+
+Zun"achst ben"otigen wir einige Definitionen.\\
+\textbf{Definition:} Das Skalarprodukt zweier Wellenfunktionen
+$\Psi$ und $\phi$ ist gegeben durch
+\begin{equation}
+	(\phi,\Psi) := \int \mathrm{d}^3 x \phi^*(\vec x)\Psi(\vec x). 
+\end{equation}
+\textbf{Definition:} $A^{+}$ hei"st zu $A$ adjungierter Operator,
+wenn gilt:
+\begin{equation}
+	(A^+ \phi, \Psi) = (\phi, A \Psi)
+\end{equation}
+f"ur beliebige $\phi$, $\Psi$.\\
+\textbf{Definition:} Der Operator $A$ hei"st hermitisch, wenn $A^+ = A$.
+F"ur hermitische Operatoren gilt:
+\begin{enumerate}
+	\item Eigenwerte hermitischer Operatoren sind reell.
+	\item Eigenfunktionen hermitischer Operatoren zu verschiedenen
+		Eigenwerten sind orthogonal.
+\end{enumerate}
+Die Eigenfunktionen der f"ur uns relevanten Operatoren sind vollst"andig,
+d.h., sie spannen den ganzen Raum auf.
+
+Observablen werden durch hermitische Operatoren beschrieben. Der Mittelwert
+im Zustand $\Psi$ ist gegeben durch
+\begin{equation}
+	\langle A \rangle = \int \mathrm{d}^3 x \Psi^*(\vec x,t) A \Psi(\vec x,t).
+\end{equation}
+Die Zeitentwicklung des Mittelwerts wird beschrieben durch:
+\begin{equation}
+	\frac{\mathrm{d}}{\mathrm{d}t} \langle A \rangle =
+	\frac{i}{\hbar} \langle[H,A]\rangle + \langle \frac{\partial A}
+	{\partial t}\rangle
+\end{equation}
+mit dem Kommutator $[B,C] = BC-CB$. Diesen Zusammenhang nennt man
+das \emph{Ehrenfestsche Theorem}.
+
+Quantenmechanische Zust"ande $\Psi(\vec x)$ lassen sich nach Eigenfunktionen
+hermitischer Operatoren entwickeln, z.B. f"ur ein diskretes Spektrum:
+\begin{equation}
+	\Psi(\vec x)=\sum \limits_{n} c_n \Psi_n(\vec x) \quad \textnormal{mit}
+	\quad c_n = (\Psi_n,\Psi).
+\end{equation}
+Dabei gilt: $\sum \limits_n |c_n|^2 = 1$. 
+
+F"ur den Mittelwert der Observablen, die durch den Operator $A$ 
+beschrieben wird, finden wir:
+\begin{equation}
+	\langle A \rangle = \sum \limits_{n} |c_n|^2 a_n.
+\end{equation}
+Interpretation: Mit Wahrscheinlichkeit $|c_n|^2$ messen wir den Wert
+$a_n$. Die Wellenfunktion geht dann in den Zustand $\Psi_n$ "uber.
+
+Beispiele f"ur Operatoren (mit kontinuierlichem Spektrum) sind 
+der Orts- und der Impulsoperator.\\
+\textbf{Ortsoperator (in einer Dimension):} 
+\begin{itemize}
+	\item Eigenwertgleichung: $x\Psi_{\xi}(x)=\xi \Psi_{\xi}(x)$
+	\item Eigenfunktionen: $\Psi_{\xi}(x) = \delta(x-\xi)$.
+\end{itemize}
+\textbf{Impulsoperator (in einer Dimension):}
+\begin{itemize}
+	\item Eigenwertgleichung: $\frac{\hbar}{i} \frac{\partial}{\partial x}
+		\Psi_p(x) = p \Psi(x)$.
+	\item Eigenfunktionen: $\Psi_p(x) = (2 \pi \hbar)^{-1/2}
+		e^{ipx/\hbar}$.
+\end{itemize}
+
+
+
+\section{Die station"are Schr"odingergleichung}
+
+Falls das Potential $U(\vec x)$ zeitunabh"angig ist, kann die 
+Schr"odingergleichung mittels eines Separationsansatzes gel"ost werden:
+\begin{equation}
+	\Psi(\vec x,t) = f(t)\Psi(\vec x).
+\end{equation}
+Einsetzen dieses Ansatzes leifert: 
+\begin{equation}
+	\frac{1}{f(t)}i\hbar \frac{\partial}{\partial t} f(t)
+	= \frac{1}{\Psi(\vec x)}H\Psi(\vec x).
+\end{equation}
+Die linke Seite h"angt nur von $t$ ab, die rechte nur von $x$. Beide
+Seiten m"ussen also gleich einer Konstanten $E$ sein. Damit ergibt
+sich f"ur den zeitabh"angigen Teil:
+\begin{equation}
+	i\hbar \frac{\partial}{\partial t}f(t)=E f(t)
+	\quad \Rightarrow \quad f(t)=e^{-iEt/\hbar}.
+\end{equation} 
+F"ur den ortsabh"angigen Teil erhalten wir:
+\begin{equation}
+	H\Psi(\vec x) = E\Psi(\vec x).
+\end{equation}
+Diese Gleichung nennt man \emph{zeitunabh"angige Schr"odingergleichung}.
+(Die Zust"ande $\Psi(\vec x,t) = \exp{(-iEt/\hbar)}\Psi(\vec x)$ 
+hei"sen station"are Zust"ande, da gilt: 
+$|\Psi(\vec x,t)|^2=|\Psi(\vec x)|^2$.)
+
+Die allgemeine L"osung der Schr"odingergleichung l"a"st sich nun nach
+diesen station"aren L"osungen entwickeln:
+\begin{equation}
+	\Psi(\vec x,t) = \sum \limits_{n} c_n e^{-iE_nt/\hbar}\Psi_n(\vec x)
+	\quad \textnormal{mit} \quad c_n = (\Psi_n,\Psi(t=0)).
+\end{equation}
+
+
+\section{Beispiel: Die Potentialstufe}
+
+siehe z.B. Schwabl, Quantenmechanik
+
+

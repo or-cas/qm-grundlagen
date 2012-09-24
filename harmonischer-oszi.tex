@@ -1,0 +1,72 @@
+% \section{Der harmonische Oszillator}
+
+Der Hamilton-Operator des harmonischen Oszillators ist
+\begin{equation}
+	\hat H = \frac{\hat  P^2}{2m} + \frac{m\omega^2}{2}\hat X^2.
+\end{equation}
+Wie wollen nun die station"are Schr"odingergleichung 
+\begin{equation}
+	\hat H |\Psi\rangle = E|\Psi \rangle
+\end{equation}
+l"osen. Dazu verwenden wir die Methode der \textbf{Auf- und Absteigeoperatoren}.
+(Warum die Operatoren so hei"sen, werden wir weiter unten sehen.)
+Der Auf- bzw. Absteigeoperator des harmonischen Oszillators ist gegeben durch
+\begin{align}
+	\hat a = \frac{\omega m \hat X + i \hat P}{\sqrt{2\omega m \hbar}},
+	\hat a^+ = \frac{\omega m \hat X-i\hat P}{\sqrt{2\omega m \hbar}}.
+\end{align}
+Bemerkung: Die beiden Operatoren sind nicht hermitisch.\\
+Damit lassen sich der Orts- und der Impulsoperator schreiben als
+\begin{align}
+	\hat X = \sqrt{\frac{\hbar}{2\omega m}}(\hat a +\hat a^+),
+	\hat P = -i \sqrt{\frac{\hbar \omega m}{2}}(\hat a -\hat a^+).
+\end{align}
+Es gilt:
+\begin{equation}
+	[\hat a,\hat a^+] = \hat a \hat a^+ - \hat a^+ \hat a = \mathbbm{\hat 1}.
+\end{equation}
+Damit lautet der Hamilton-Operator:
+\begin{equation}
+	\hat H = \frac{1}{2}\hbar \omega (\hat a^+\hat a + \hat a\hat a^+) = \frac{1}{2}\hbar \omega (2\hat a^+\hat a +
+	\mathbbm{\hat 1}) = \hbar \omega \left(\hat a^+ \hat a + \frac{1}{2}\right).
+\end{equation}
+Somit ist das Problem auf die Auffindung der Eigenwerte des \textbf{Besetzungszahloperators}
+\begin{equation}
+	\hat n = \hat a^+\hat a
+\end{equation}
+zur"uckgef"uhrt.
+
+Es sei $|\nu\rangle$ Eigenzustand zum Eigenwert $\nu$. Es gilt:
+\begin{equation}
+\begin{split}
+	&\nu \langle \nu|\nu \rangle = \langle \nu|\hat a^+ \hat a|\nu\rangle \geq 0 \quad (=0 \, \textnormal{f"ur} \, |\hat a |\nu\rangle=0). 
+	\\
+	&\Rightarrow \nu \geq 0.
+\end{split}
+\end{equation}
+D.h. $\nu=0$ ist der niedrigstm"ogliche EW. Gibt es dazu einen EV? Ja! (aus $|\hat a|\nu \rangle =0$ in der Ortsdarstellung
+berechenbar). 
+
+Wir werden jetzt die "ubrigen Eigenwerte und Eigenvektoren berechnen. Dazu brauchen wir zun"achst zwei weitere
+Relationen:
+\begin{align}
+	[\hat n, \hat a^+] = \hat a^+,
+	[\hat n, \hat a]=-\hat a.
+\end{align}
+(Denn: $[\underbrace{\hat a^+\hat a}_{\hat n}, \hat a^+] = \hat a^+ \underbrace{[\hat a, \hat a^+]}_{=1} + 
+\underbrace{[\hat a^+,\hat a^+]}_{=0} \hat a = \hat a^+$ und 
+$[\hat n, \hat a] = \hat a^+ [\hat a, \hat a] + [\hat a^+, \hat a]\hat a=-\hat a$.)
+
+Behauptung: $\hat a^+ |\nu \rangle$ ist Eigenfunktion zum Eigenwert $\nu+1$.
+\begin{equation}
+	\hat n \hat a^+ |\nu\rangle = (\hat a^+ \hat n + \hat a^+) |\nu\rangle = (\nu+1)\hat a^+ |\nu\rangle.
+\end{equation}
+Normierung: 
+\begin{equation}
+	\langle \nu| \hat a \hat a^+|\nu\rangle = \langle \nu|\hat a^+ \hat a + 1|\nu \rangle=
+	(\nu+1) \langle \nu|\nu \rangle >0.
+\end{equation}
+Somit gilt f"ur auf $1$ normierte $|\nu\rangle$, $|\nu+1\rangle$: 
+\begin{equation}
+	\hat a^+ |\nu\rangle = \sqrt{\nu+1} |\nu+1\rangle.
+\end{equation}

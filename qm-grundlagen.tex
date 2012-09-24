@@ -1,16 +1,27 @@
-\documentclass[a4paper,10pt]{scrbook}
-\usepackage{lmodern}  % Latin Modern font
+\documentclass[a4paper,10pt,bibliography=totoc]{scrbook}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
+
+%% TYPOGRAPHY
+\usepackage{lmodern}  % Latin Modern font
 \usepackage{csquotes}
+
+%% GRAPHICS
+\usepackage{graphicx}
+% Graphics configuration
+\DeclareGraphicsExtensions{.pdf,.png}
+\graphicspath{{bilder/}}
+
+%% MATH packages
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{bbm}
 \usepackage{braket}
 
-\usepackage{graphicx}
-
-\usepackage{amsmath,amssymb,amsthm}
-
+%% BIBLIOGRAPHY
 \usepackage[backend=biber]{biblatex} % biblatex, biber, logreq, etoolbox required
+\addbibresource{qm.bib}
+
 
 \usepackage{hyperref} % hyperref>=6.82a required
 
@@ -22,15 +33,11 @@
  hidelinks
 }
 
-% Graphics configuration
-\DeclareGraphicsExtensions{.pdf,.png}
-\graphicspath{{bilder/}}
 
 
 \input{qm-makros}
 \input{rep-makros}
 
-\addbibresource{qm.bib}
 
 \begin{document}
 \pagestyle{headings}
@@ -87,12 +94,16 @@ Dieses Werk ist unter einer Creative Commons Lizenz vom Typ Namensnennung -- Nic
 
 \chapter{Montag: Wellenmechanik}
 
+\input{wellenmechanik}
+
 \chapter{Dienstag: Dirac-Formalismus}
 
 \input{dirac}
 
 
 \chapter{Mittwoch: Harmonischer Oszillator}
+
+\input{harmonischer-oszi}
 
 \chapter{Donnerstag: Drehimpuls, Zentralpotential, Wasserstoffatom}
 
