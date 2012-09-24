@@ -106,10 +106,10 @@ order=-1
 
 [item:dirac-formalismus.tex]
 archive=true
-column=12
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=113
+line=114
 mode=LaTeX
 open=true
 order=2
@@ -156,20 +156,20 @@ order=0
 
 [item:qm-makros.tex]
 archive=true
-column=2
+column=50
 encoding=UTF-8
 highlight=LaTeX
-line=25
+line=34
 mode=LaTeX
 open=true
 order=5
 
 [item:rep-makros.tex]
 archive=true
-column=26
+column=28
 encoding=UTF-8
 highlight=LaTeX
-line=18
+line=21
 mode=LaTeX
 open=true
 order=4
@@ -189,8 +189,8 @@ CursorColumn=0
 CursorLine=0
 
 [view-settings,view=0,item:dirac-formalismus.tex]
-CursorColumn=12
-CursorLine=113
+CursorColumn=0
+CursorLine=114
 JumpList=
 ViMarks=
 
@@ -213,14 +213,14 @@ JumpList=
 ViMarks=
 
 [view-settings,view=0,item:qm-makros.tex]
-CursorColumn=2
-CursorLine=25
+CursorColumn=50
+CursorLine=34
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:rep-makros.tex]
-CursorColumn=26
-CursorLine=18
+CursorColumn=28
+CursorLine=21
 JumpList=
 ViMarks=
 

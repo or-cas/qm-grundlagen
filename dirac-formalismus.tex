@@ -20,30 +20,30 @@ Wie k\"onnen wir nun mit diesen abstrakten quantenmechanischen Zust\"anden rechn
 
 Nach Dirac nennen wir einen Zustandsvektor \keta\ auch \emph{ket-Vektor} (kurz: \emph{ket}), und den Hilbertraum \emph{ket-Raum}.
 
-Wie Vektoren k\"onnen wir kets $\keta, \ketb \in \hs$ addieren, die Summe ist wieder ein ket:
+Wie Vektoren k\"onnen wir Kets $\keta, \ketb \in \hs$ addieren, die Summe ist wieder ein Ket:
 \begin{equation*}
  \keta + \ketb = \ket{\gamma} \in \hs
 \end{equation*}
-Wie ein Vektor l\"asst sich auch ein ket mit einer komplexen Zahl $c \in \comps$ multiplizieren, und wir erhalten wieder ein ket:
+Wie ein Vektor l\"asst sich auch ein Ket mit einer komplexen Zahl $c \in \comps$ multiplizieren, und wir erhalten wieder ein Ket:
 \begin{equation*}
  c \keta = \keta c \in \hs
 \end{equation*}
 
 \begin{post}
- $\keta$ und $c \keta$ mit $c \neq 0$ sind zwar zwei verschiedene Elemente im ket-Raum \hs, repr\"asentieren aber den selben physikalischen Zustand.
+ $\keta$ und $c \keta$ mit $c \neq 0$ sind zwar zwei verschiedene Elemente im Ket-Raum \hs, repr\"asentieren aber den selben physikalischen Zustand.
 \end{post}
 
 \subsection{Observablen}
 Wie k\"onnen wir nun konkret etwas \"uber unser physikalisches System erfahren, das durch einen abstrakten Zustandsvektor repr\"asentiert wird? Durch messbare physikalische Gr\"o\ss{}en:
 
 \begin{post}
- Messbare physikalische Gr\"o\ss{}en (\emph{Observablen}) werden durch lineare Abbildungen (\emph{Operatoren}) auf dem ket-Raum repr\"asentiert.
+ Messbare physikalische Gr\"o\ss{}en (\emph{Observablen}) werden durch lineare Abbildungen (\emph{Operatoren}) auf dem Ket-Raum repr\"asentiert.
 \end{post}
-Eine Observable $A$ wird also repr\"asentiert durch den Operator $\op{A}: \hs \rightarrow \hs$, $\op{A}( \keta) \equiv \op{A}\keta \equiv A \keta \in \hs$ ist wieder ein ket.
+Eine Observable $A$ wird also repr\"asentiert durch den Operator $\op{A}: \hs \rightarrow \hs$, $\op{A}( \keta) \equiv \op{A}\keta \equiv A \keta \in \hs$ ist wieder ein Ket.
 \begin{konv}
  Mit der Schreibweise $A$ ist oft der Operator $\op{A}$ der Observablen $A$ gemeint!
 \end{konv}
-Im Allgemeinen ist das ket $\op{A} \keta$ nicht gleich einer komplexen Zahl multipliziert mit $\keta$! Aber:
+Im Allgemeinen ist das Ket $\op{A} \keta$ nicht gleich einer komplexen Zahl multipliziert mit $\keta$! Aber:
 \begin{defn}
 Die Eigenvektoren $\ket{a_i}$ der linearen Abbildung $\op{A}$ bezeichnen wir auch als \emph{Eigenkets} oder \emph{Eigenzust\"ande} des physikalischen Systems bez\"uglich der Observablen $A$, mit den jeweiligen Eigenwerten $a_i \in \comps$:
 \begin{equation*}
@@ -61,29 +61,22 @@ Die Eigenvektoren $\ket{a_i}$ der linearen Abbildung $\op{A}$ bezeichnen wir auc
 
 \end{bsp}
 
+\subsection{Duale Zustandsvektoren (bras)}
 \begin{post}
- Gegeben sei eine Observable $A$ mit den Eigenzust\"anden $\ket{a_i}$. Wir k\"onnen jeden Zustandsvektor $\keta$ nach diesen Eigenzust\"anden entwickeln, sprich als Summe der Eigenzust\"ande mit komplexen Vorfaktoren $c_i \in \comps$ schreiben:
-\begin{equation}
- \keta = \sum_i c_i \ket{a_i}
-\end{equation}
-Wir sagen auch: Die Eigenzust\"ande $\ket{a_i}$ spannen den Ketraum $\hs$ auf.
-\end{post}
-
-\subsection{Duale Zustandsvektoren (bras) und Skalarprodukt}
-\begin{post}
- Zu jedem Zustandsvektor $\keta \in \hs$ existiert ein \emph{duales} ket $\braa \in \ds{\hs}$ im Dualraum von \hs, dem Raum \ds{\hs}\ der linearen Abbildungen $\hs \rightarrow \comps$. Wir bezeichnen $\braa$ auch als das zum ket $\keta$ korrespondierende \emph{bra} (oder den \emph{bra-Vektor}), und \ds{\hs}\ als \emph{bra-Raum}, und schreiben:
+ Zu jedem Zustandsvektor $\keta \in \hs$ existiert ein \emph{duales} Ket $\braa \in \ds{\hs}$ im Dualraum von \hs, dem Raum \ds{\hs}\ der linearen Abbildungen $\hs \rightarrow \comps$. Wir bezeichnen $\braa$ auch als das zum Ket $\keta$ korrespondierende \emph{bra} (oder den \emph{bra-Vektor}), und \ds{\hs}\ als \emph{bra-Raum}, und schreiben:
 \begin{equation}
  \keta \dc \braa
 \end{equation}
- Wir postulieren weiterhin, dass wir mit den korrespondierenden bras wie mit den kets rechnen k\"onnen:
+ Wir postulieren weiterhin, dass wir mit den korrespondierenden Bras wie mit den Kets rechnen k\"onnen:
 \begin{equation}
  c_{\alpha} \keta + c_{\beta} \ketb \dc \cc{c_{\alpha}} \braa + \cc{c_{\beta}} ,
 \end{equation}
 wobei die Vorfaktoren durch duale Korrespondenz komplex konjugiert werden!
 \end{post}
 
+\subsection{Inneres Produkt (Skalarprodukt)}
 \begin{post}
- Um die Dirac'sche bra-ket-Notation zu vollenden, postulieren wir nun noch das \emph{innere Produkt} (Skalarprodukt) $\braket{\beta | \alpha} \in \comps$ eines bras $\brab$ und eines kets $\keta$:
+ Um die Dirac'sche Bra-ket-Notation zu vollenden, postulieren wir nun noch das \emph{innere Produkt} (Skalarprodukt) $\braket{\beta | \alpha} \in \comps$ eines Bras $\brab$ und eines Kets $\keta$:
 \begin{equation}
  \braket{\beta | \alpha} \equiv \brab \cdot \keta \equiv \brab ( \keta ) \in \comps
 \end{equation}
@@ -108,22 +101,22 @@ Das innere Produkt habe folgende Eigenschaften:
  Wir nennen einen Zustandsvektor \keta\ \emph{normiert}, wenn $\braket{\alpha | \alpha} = 1$ gilt.
 \end{defn}
 \begin{konv}
- Da ein physikalischer Zustand von einem ket nur bis auf einen komplexen Vorfaktor festgelegt ist, k\"onnen wir festlegen, dass wir im folgenden nur noch normierte Zustandsvektoren betrachten.
+ Da ein physikalischer Zustand von einem Ket nur bis auf einen komplexen Vorfaktor festgelegt ist, k\"onnen wir festlegen, dass wir im folgenden nur noch normierte Zustandsvektoren betrachten.
 \end{konv}
 
 \subsection{Operatoren}
 Wenden wir uns nun wieder den Operatoren zu, und zwar ganz allgemein linearen Abbildungen auf dem Ketraum \hs, nicht nur solchen, die physikalisch messbaren Gr\"o\ss{}en (Observablen) entsprechen.
 
 \begin{eig}
-Auf ein ket \keta\ wirkt ein Operator \opx\ ganz normal \enquote{von links}, d.h. $\opx(\keta) \equiv \opx \keta \in \hs$ ist wieder ein ket.
+Auf ein Ket \keta\ wirkt ein Operator \opx\ ganz normal \enquote{von links}, d.h. $\opx(\keta) \equiv \opx \keta \in \hs$ ist wieder ein Ket.
 \end{eig}
 
 \begin{eig}
- Wie Funktionen auf den reellen Zahlen auch werden Operatoren dar\"uber definiert, wie sie auf (alle) kets wirken.
+ Wie Funktionen auf den reellen Zahlen auch werden Operatoren dar\"uber definiert, wie sie auf (alle) Kets wirken.
 \end{eig}
 
 \begin{bsp}
- Zwei Operatoren $\opx, \opy$ sind gleich, $\opx=\opy$, wenn $\opx \keta = \opy \keta$ f\"ur alle kets $\keta$ gilt.
+ Zwei Operatoren $\opx, \opy$ sind gleich, $\opx=\opy$, wenn $\opx \keta = \opy \keta$ f\"ur alle Kets $\keta$ gilt.
 \end{bsp}
 
 \begin{eig}
@@ -141,20 +134,51 @@ Operatoren lassen sich \enquote{wie Zahlen} zu neuen Operatoren addieren, kommut
  \end{equation}
 \end{eig}
 
-\begin{eig}
-Operatoren wirken auch auf bras, und zwar \emph{von rechts}!
+\begin{post}
+Operatoren wirken auch auf Bras, und zwar \emph{von rechts}!
 \begin{equation}
 \opx(\braa) \equiv \braa \opx \in \ds
 \end{equation} 
-$\braa\opx$ ist wieder ein bra!
+$\braa\opx$ ist wieder ein Bra! Ein Operator \opx\ wirke gerade so auf einen Bra-Vektor \braa, dass f\"ur beliebe \ketb\ gilt:
+ \begin{equation}
+  (\braa \opx) \cdot \ketb = (\braa) \cdot (\opx \ketb) \in \comps
+ \end{equation}
+ Dies ist eine komplexe Zahl, da es sich um ein Skalarprodukt aus dem Bra $\braa\opx$ und dem Ket \ketb\ bzw. aus dem Bra $\braa$ und dem Ket $\opx\ketb$ handelt.
+\end{post}
+\begin{konv}
+ Da hier wieder ein Assoziativgesetz gilt, k\"onnen wir die Klammern auch weglassen und schreiben:
+ \begin{equation}
+  (\braa \opx) \cdot \ketb = (\braa) \cdot (\opx \ketb) \equiv \braa \opx \ketb
+ \end{equation}
+\end{konv}
+
+\begin{eig}
+ Wir k\"onnen Operatoren multiplizieren, d.h. hintereinander auf einen Zustandsvektor \keta\ anwenden, und wieder ein Ket erhalten: $\opy \opx \keta \equiv \opy ( \opx \keta) \in \hs$.
 \end{eig}
 
+\begin{eig}
+ Die Reihenfolge ist bei der Multiplikation (Hintereinanderausf\"uhrung) von Operatoren im Allgemeinen nicht egal! Im Allgemeinen \emph{kommutieren} Operatoren \emph{nicht}:
+ \begin{equation}
+  \opx \opy \neq \opy \opx
+ \end{equation}
+\end{eig}
+\begin{eig}
+ Die Multiplikation von Operatoren ist aber assoziativ, d.h.
+ \begin{gather}
+  \opx (\opy \op{Z}) = (\opx \opy) \op{Z} \equiv \opx \opy \op{Z} \\
+  \opx(\opy \keta) = (\opx \opy) \keta \equiv \opx \opy \keta \\
+  (\brab \opx) \opy = \brab (\opx \opy)\equiv \brab \opx \opy
+ \end{gather}
+
+\end{eig}
+
+\subsection{Der hermitesch adjungierte Operator}
 \begin{notiz}
- Im Allgemeinen korrespondiert das bra $\braa \opx$ nicht mit dem ket $\opx \keta$! Aber:
+ Im Allgemeinen korrespondiert das Bra $\braa \opx$ nicht mit dem Ket $\opx \keta$! Daher:
 \end{notiz}
 
 \begin{defn}
- Sei \opx\ ein Operator. Der zu \opx\ \emph{hermitesch adjungierte Operator} oder auch einfach \emph{adjungierte Operator} \opxh\ sei f\"ur alle kets \keta\ definiert \"uber die duale Korrespondenz
+ Sei \opx\ ein Operator. Der zu \opx\ \emph{hermitesch adjungierte Operator} oder auch einfach \emph{adjungierte Operator} \opxh\ sei f\"ur alle Kets \keta\ definiert \"uber die duale Korrespondenz
  \begin{equation}
   \opx \keta \dc \braa \opxh
  \end{equation}
@@ -162,9 +186,189 @@ $\braa\opx$ ist wieder ein bra!
 \end{defn}
 
 \begin{defn}
- Gilt f\"ur einen Operator $\opxh = \opx$, d.h. $\opx \keta \dc \braa \opx$ f\"ur alle kets \keta, so hei\ss{}t \opx\ \emph{hermitesch}.
+ Gilt f\"ur einen Operator $\opxh = \opx$, d.h. $\opx \keta \dc \braa \opx$ f\"ur alle Kets \keta, so hei\ss{}t \opx\ \emph{hermitesch}.
 \end{defn}
 
 \begin{eig}
- Wir k\"onnen Operatoren multiplizieren, d.h. hintereinander auf einen Zustandsvektor \keta\ anwenden, und wieder ein ket erhalten: $\opy \opx \keta \equiv \opy ( \opx \keta) \in \hs$.
+ \begin{equation}
+  \herm{(\opx \opy)} = \opyh \opxh
+ \end{equation}
+
 \end{eig}
+\begin{aufg}
+ Zeigen Sie $\herm{(\opx \opy)} = \opyh \opxh$!
+\end{aufg}
+\begin{tipp}
+\begin{enumerate}
+ \item Auf beiden Seiten der Gleichung steht ein Operator. Wann sind diese beiden Operatoren gleich?
+ \item Assoziativgesetz und Definition der hermitesch Adjungierten jeweils einmal f\"ur \opx\ und \opy\ getrennt anwenden.
+\end{enumerate}
+\end{tipp}
+\begin{loes}
+ Die Operatoren sind gleich, wenn sie f\"ur alle Zustandsvektoren \keta\ das gleiche Ergebnis liefern. Sei \keta\ daher nun ein beliebiges Ket.
+ \begin{align}
+  \opx \opy \keta &= \opx ( \opy \keta) \tag{Assoziativgesetz}\\
+  &\dc \Bra{\opy \keta} \opxh \tag{Definition von \opxh}\\
+  &= (\braa \opyh) \opxh \tag{$\Bra{\opy \keta} = \braa \opyh$, Definition von \opyh} \\
+  &= \braa \opyh \opxh \tag{Assoziativgesetz}
+ \end{align}
+
+ \qedsymbol
+\end{loes}
+
+\begin{aufg}
+ Zeigen Sie $\brab\opx\keta = \cc{\braa\opxh\ketb}$.
+\end{aufg}
+\begin{loes}
+ \begin{align}
+  \brab\opx\keta &= \brab \cdot \left(\opx\keta\right) \tag{Assoziativgesetz} \\
+  &= \cc{\left(\left(\braa\opxh\right) \cdot \ketb \right)} \tag{Eigenschaft des Skalarprodukts} \\
+  &= \cc{\Braket{\alpha | \opxh | \beta}} \tag{Assoziativgesetz}
+ \end{align}
+ \qedsymbol
+\end{loes}
+
+\begin{notiz}
+ F\"ur hermitesche Operatoren $\opxh = \opx$ gilt demnach:
+ \begin{equation}
+  \Braket{\beta | \opx | \alpha} = \cc{\Braket{\alpha | \opx | \beta}}
+ \end{equation}
+
+\end{notiz}
+
+
+\subsection{Das \"au\ss{}ere Produkt}
+\begin{post}
+ Sei \ketb\ ein Ket-Vektor und \braa\ ein Bra-Vektor. Wir postulieren nun ein \emph{\"au\ss{}eres Produkt} als einen Operator $\opx = \ketb\braa$, der wie folgt auf ein beliebiges Ket $\ket{\gamma}$ bzw. Bra $\bra{\gamma}$ wirkt:
+ \begin{align}
+  \opx (\ket{\gamma}) &= (\ketb\braa)(\ket{\gamma}) \equiv \ketb (\braket{\alpha|\gamma}) \\
+  \bra{\gamma} \opx &= \bra{\gamma} (\ketb\braa) \equiv (\braket{\gamma | \beta}) \braa
+ \end{align}
+ $\braket{\alpha|\gamma}$ ist wieder das Skalarprodukt, eine komplexe Zahl, die mit dem Ket \ketb\ multipliziert wird, sodass am Ende wieder ein Ket herauskommt.
+\end{post}
+\begin{notiz}
+ Der Operator $\ketb\braa$ projiziert ein Ket $\ket{\gamma}$ auf die Richtung des Ket-Vektors \ketb! Dabei gibt der Vorfaktor $\braket{\alpha|\gamma}$ gerade an, wie sehr $\ket{\gamma}$ mit dem Zustand \keta\ \"uberlappt!
+\end{notiz}
+\begin{konv}
+ Wenn die Notation eindeutig bleibt, schreiben wir auch einfach:
+ \begin{equation}
+  (\ketb\braa)(\ket{\gamma}) \equiv \ketb (\braket{\alpha|\gamma}) \equiv \ketb\braket{\alpha|\gamma}
+ \end{equation}
+ Dies verdeutlicht das f\"ur das \"au\ss{}ere Produkt geltende Assoziativgesetz!
+\end{konv}
+
+\begin{aufg}
+ Zeigen Sie $\herm{(\ketb\braa)} = \keta\brab$.
+\end{aufg}
+\begin{tipp}
+ \begin{enumerate}
+  \item Wann sind zwei Operatoren gleich? Wenn sie auf ein beliebiges Ket angewendet das selbe Ergebnis liefern.
+  \item F\"uhren Sie die duale Korrespondenz des Operators $(\ketb\braa)$ auf die bekannte duale Korrespondenz des resultierenden Ket-Vektors \ketb\ zur\"uck.
+ \end{enumerate}
+\end{tipp}
+\begin{loes}
+ Sei $\ket{\gamma}$ ein beliebiger Zustandsvektor.
+ \begin{align}
+ (\ketb\braa) \ket{\gamma} &= \ketb (\braket{\alpha | \gamma}) \tag{Definition des \"au\ss{}eren Produkts} \\
+ &\dc \cc{(\braket{\alpha | \gamma})} \brab \tag{Duale Korrespondenz von \ketb} \\
+ &= (\braket{\gamma | \alpha}) \brab \tag{Eigenschaft des Skalarprodukts} \\
+ &= \bra{\gamma} (\keta\brab) \tag{Definition des \"au\ss{}eren Produkts} \\
+ \Leftrightarrow  (\ketb\braa) \ket{\gamma} &\dc \bra{\gamma} (\keta\brab)
+ \end{align}
+\qedsymbol
+\end{loes}
+
+\subsection{Hermitesche Operatoren}
+Nun betrachten wir die Eigenwerte und Eigenzust\"ande hermitescher Operatoren \opa\ ($\herm{\opa} = \opa$).
+\begin{eig}
+ Die Eigenwerte $a_i$ eines hermiteschen Operators \opa\ mit $\opa \ket{a_i} = a_i \ket{a_i}$ sind reell. Die Eigenzust\"ande von \opa\ zu verschiedenen Eigenwerten sind orthogonal: $\braket{a_j|a_i} = 0$ f\"ur $a_j \neq a_i$.
+\end{eig}
+\begin{aufg}
+ Zeigen Sie diese beiden Eigenschaften eines hermiteschen Operators \opa.
+\end{aufg}
+\begin{tipp}
+ Was sind die Eigenwerte und Eigenvektoren von \opa\ im Bra-Raum? Geben Sie hierzu die Eigenwertgleichung im Bra-Raum an, die mit der Eigenwertgleichung $\opa \ket{a_i} = a_i \ket{a_i} $ dual korrespondiert.
+\end{tipp}
+\begin{loes}
+ Die Eigenvektoren von \opa\ im Bra-Raum sind gerade die mit den Eigenvektoren dual korrespondierenden Bras $\bra{a_i}$, mit den komplex konjugierten Eigenwerten $\cc{a_i}$. F\"ur beliebige Eigenzust\"ande $\ket{a_i}, \ket{a_j}$ gilt:
+ \begin{align}
+ \opa \ket{a_i} &= a_i\ket{a_i} \tag{Eigenwertgleichung f\"ur \opa\ im Ketraum} \\
+ \Rightarrow \braket{a_j | \opa | a_i} &= \braket{a_j | a_i | a_i} = a_i \braket{a_j|a_i} \\
+ \bra{a_j} \opa &= \cc{a_j} \bra{a_j} \tag{Eigenwertgleichung im Braraum} \\
+ \Rightarrow \braket{a_j | \opa | a_i} &= \cc{a_j} \braket{a_j|a_i} \\
+ \Rightarrow a_i \braket{a_j | a_i} &= \cc{a_j} \braket{a_j | a_i} \\
+ \Rightarrow (a_i - \cc{a_j}) \braket{a_j | a_i} &= 0
+ \end{align}
+ F\"ur den Fall $\ket{a_j} = \ket{a_i}$ ist $\braket{a_j | a_i} = \braket{a_i | a_i} = 1 \neq 0$, also muss $a_i = \cc{a_j} = \cc{a_i}$ sein und damit $a_i \in \reals$. F\"ur den Fall $a_j \neq a_i$ muss gelten $\braket{a_j | a_i} = 0$. \qedsymbol
+\end{loes}
+
+\subsection{Die orthonormale Basis von Eigenzust\"anden einer Observablen}
+\begin{post}
+ Gegeben sei eine Observable $A$ mit den Eigenzust\"anden $\ket{a_i}$. Wir k\"onnen jeden Zustandsvektor $\keta$ nach diesen Eigenzust\"anden entwickeln, sprich als Summe der Eigenzust\"ande mit komplexen Vorfaktoren $c_i \in \comps$ schreiben:
+\begin{equation}
+ \keta = \sum_i c_i \ket{a_i}
+\end{equation}
+Wir sagen auch: Die Eigenzust\"ande $\ket{a_i}$ spannen den Ketraum $\hs$ auf. Die komplexen \emph{Entwicklungskoeffizienten} $c_i$ von \keta\ sind gerade gegeben durch
+ \begin{equation}
+  c_i = \braket{a_i | \alpha} \in \comps
+ \end{equation}
+Entsprechend gelte mit
+\begin{equation}
+ \keta = \sum_i \ket{a_i}\braket{a_i|\alpha},
+\end{equation}
+da \keta\ ein beliebiger Zustandsvektor ist:
+\begin{equation}
+ \sum_i\ket{a_i}\bra{a_i} = \opi
+\end{equation}
+\opi\ ist der Identit\"atsoperator, der also alle Kets $\keta$ auf sich selbst abbildet: $\opi \keta = \keta$.
+\end{post}
+
+\begin{defn}
+ Die Einzel-Operatoren $\ket{a_i}\bra{a_i}$ der Zerlegung von \opi\ nennen wir \emph{Projektionsoperator} zum Eigenzustand $\ket{a_i}$, da sie einen beliebigen Zustand \keta\ auf die Richtung von $\ket{a_i}$ projizieren, mit dem \enquote{\"Uberlapp} (Vorfaktor) $c_i = \braket{a_i | \alpha}$.
+\end{defn}
+
+\begin{defn}
+ Wir w\"ahlen die Eigenzust\"ande $\ket{a_i}$ einer Observablen $A$ so, dass sie ein \emph{vollst\"andiges Orthonormalsystem} (\emph{VONS}) $\{\ket{a_i}\}_i$ bilden:
+ \begin{equation}
+  \braket{a_j | a_i} = \delta_{ij}
+ \end{equation}
+\end{defn}
+
+\begin{aufg}
+ Zeigen Sie, dass die Summe der Betragsquadrate der Entwicklungskoeffizienten $c_i$ von einem beliebigen Zustand \keta\ bez\"uglich des VONS $\{\ket{a_i}\}_i$ gerade $1$ ergibt:
+ \begin{equation}
+  \sum_i |c_i|^2 = 1
+ \end{equation}
+\end{aufg}
+\begin{tipp}
+ Geschicktes Identifizieren der \opi!
+\end{tipp}
+\begin{loes}
+ \begin{align}
+  \sum_i |c_i|^2 &= \sum_i \lvert\braket{a_i|\alpha}\rvert^2 \\
+  &= \sum_i \cc{\braket{a_i | \alpha}} \braket{a_i|\alpha} \\
+  &= \sum_i \braket{\alpha | a_i} \braket{a_i|\alpha} \\
+  &= \braa \left(\sum_i \ket{a_i}\bra{a_i} \right) \keta \\
+  &= \braa \opi \keta = \braket{\alpha | \alpha} = 1.
+ \end{align}
+ \qedsymbol
+\end{loes}
+
+
+\subsection{Matrixdarstellung von Operatoren}
+\emph{Wir erinnern uns daran, dass unsere Operatoren lineare Abbildungen auf einem Vektorraum sind, und wir zudem zu einer Observablen $A$ eine Basis (VONS) $\{\ket{a_i}\}_i$ von Eigenzust\"anden dieser Observablen zur Verf\"ugung haben. Damit k\"onnen wir Operatoren auch in gewohnter Form als Matrizen bez\"uglich dieser Basis darstellen!}
+\begin{defn}
+ Gegeben eine Basis von Eigenzust\"anden (VONS)  $\{\ket{a_i}\}_i$ einer Observablen $A$, k\"onnen wir einen Operator \opx\ durch Hinzuf\"ugen von \opi-en schreiben als:
+ \begin{align}
+  \opx &= \opi \cdot  \opx \cdot \opi = \left(\opix{i}{a_i} \right) \opx \left(\opix{j}{a_j}\right) \\
+  &= \sum_{i,j} \ket{a_i} \Braket{a_i | \opx | a_j} \bra{a_j} \\
+  &\equiv \sum_{i,j} X_{ij} \ket{a_i}\bra{a_j}
+ \end{align}
+ $X_{ij} = \Braket{a_i | \opx | a_j} \in \comps$ hei\ss{}t das \emph{Matrixelement $(i,j)$} von \opx\ bez\"uglich der Basis $\{\ket{a_i}\}_i$.
+\end{defn}
+\begin{notiz}
+ Wir haben den Operator \opx\ also zerlegt in eine Summe von Operatoren $\ket{a_i}\bra{a_j}$ mit den Matrixelementen $X_{ij}$ als komplexen Koeffizienten.
+\end{notiz}
+\begin{defn}
+ Wir nennen die Matrix
+\end{defn}
