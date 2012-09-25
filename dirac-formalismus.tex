@@ -216,7 +216,7 @@ $\braa\opx$ ist wieder ein Bra! Ein Operator \opx\ wirke gerade so auf einen Bra
  \qedsymbol
 \end{loes}
 
-\begin{aufg}
+\begin{aufg} \label{aufg:ccadjmatrixelement}
  Zeigen Sie $\brab\opx\keta = \cc{\braa\opxh\ketb}$.
 \end{aufg}
 \begin{loes}
@@ -367,8 +367,42 @@ da \keta\ ein beliebiger Zustandsvektor ist:
  $X_{ij} = \Braket{a_i | \opx | a_j} \in \comps$ hei\ss{}t das \emph{Matrixelement $(i,j)$} von \opx\ bez\"uglich der Basis $\{\ket{a_i}\}_i$.
 \end{defn}
 \begin{notiz}
- Wir haben den Operator \opx\ also zerlegt in eine Summe von Operatoren $\ket{a_i}\bra{a_j}$ mit den Matrixelementen $X_{ij}$ als komplexen Koeffizienten.
+ Wir haben den Operator \opx\ also zerlegt in eine Summe von Operatoren $\ket{a_i}\bra{a_j}$ mit den Matrixelementen $X_{ij} = \braket{a_i | \opx | a_j}$ als komplexen Koeffizienten.
 \end{notiz}
+\begin{aufg}
+ Seien die Matrixelemente $X_{ij} = \braket{a_i | \opx | a_j}$ eines Operators \opx\ bez\"uglich eines VONS $\{\ket{a_i}\}_i$ gegeben. Geben Sie das Matrixelement $\braket{a_i | \opxh | a_j}$ des adjungierten Operators \opxh\ an!
+\end{aufg}
+\begin{tipp}
+ Wir haben das schon berechnet!
+\end{tipp}
+\begin{loes}
+ \begin{equation}
+  \braket{a_i | \opxh | a_j} = \cc{\braket{a_j | \opx | a_i}}
+ \end{equation}
+ Siehe Aufgabe \ref{aufg:ccadjmatrixelement}! \qedsymbol
+\end{loes}
+
+
 \begin{defn}
  Wir nennen die Matrix
+ \begin{equation}
+  \opx \doteq \begin{pmatrix}
+            \braket{a_1 | \opx | a_1} & \braket{a_1 | \opx | a_2} & \cdots \\
+            \braket{a_2 | \opx | a_1} & \braket{a_2 | \opx | a_2} & \cdots \\
+            \vdots & \vdots & \ddots
+           \end{pmatrix}
+ \end{equation}
+ die \emph{Matrixdarstellung} des Operators \opx\ bez\"uglich des VONS $\{\ket{a_i}\}_i$. Der Eintrag in der $i$-ten Zeile und $j$-ten Spalte ist gerade das Matrixelement $X_{ij} = \braket{a_i | \opx | a_j}$.
 \end{defn}
+\begin{notiz}
+ Die Matrixdarstellung eines Operators h\"angt somit von der gew\"ahlten Basis ab! Daher ist der Operator nicht \emph{gleich} der Matrix, und wir w\"ahlen das Symbol \enquote{$\doteq$}. Oft schreibt man aber auch \enquote{$=$}, insbesondere wenn man in einer festen Basis von Eigenzust\"anden rechnet.
+\end{notiz}
+\begin{eig}
+ Die Matrixdarstellung eines Operators ist quadratisch und hat so viele Zeilen bzw. Spalten, wie es Basiszust\"ande gibt. Die Zahl der Basiszust\"ande entspricht der Dimension unseres Zustandsraums (Hilbertraums) \hs.
+\end{eig}
+\begin{aufg}
+ Sei die Matrixdarstellung eines Operators \opx\ bez\"uglich einer Basis $\{\ket{a_i}\}_i$ gegeben. Wie erhalten Sie hieraus die Matrixdarstellung von \opxh?
+\end{aufg}
+\begin{loes}
+ Mit $\braket{a_i | \opxh | a_j} = \cc{\braket{a_j | \opx | a_i}}$ wissen wir, dass das Matrixelement von \opxh\ in der $i$-ten Zeile und $j$-ten Spalte gerade das komplex konjugierte Matrixelement von \opx\ in der $j$-ten Zeile und $i$-ten Spalte ist. Die Matrixdarstellung von \opxh\ ist also die transponierte und komplex konjugierte Matrixdarstellung von \opx.
+\end{loes}
