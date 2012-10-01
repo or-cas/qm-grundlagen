@@ -70,3 +70,42 @@ Somit gilt f"ur auf $1$ normierte $|\nu\rangle$, $|\nu+1\rangle$:
 \begin{equation}
 	\hat a^+ |\nu\rangle = \sqrt{\nu+1} |\nu+1\rangle.
 \end{equation}
+Ausgehend von $|0 \rangle$:
+\begin{equation}
+	 |\nu \rangle = \frac{1}{\sqrt{\nu}}\hat a^+|\nu-1\rangle = \frac{1}{\sqrt{\nu!}}(\hat a^+)^\nu|0\rangle.
+\end{equation}
+Sind das alle Eigenvektoren?\\
+Behauptung: $\hat a |\nu\rangle$ ist Eigenzustand zum Eigenwert $\nu-1$.
+\begin{equation}
+	 \hat n \hat a |\nu \rangle = (\hat a \hat n -\hat a)|\nu \rangle = (\nu-1)\hat a |\nu\rangle 
+\end{equation}
+Norm:	 
+\begin{equation}
+	 \langle \nu|\hat a^+ \hat a| \rangle = \nu \langle \nu |\nu \rangle \, \textnormal{f``ur} 
+	 \, \nu\geq 0 \quad (=0 \, \textnormal{f''ur} \, \nu=0).
+\end{equation}
+F``ur $\nu \geq 1$: $\hat a |\nu \rangle = \sqrt{\nu}|\nu-1\rangle$.\\
+Behauptung: Mit $|\nu \rangle$, $\nu=1,2\dots$ sind alle Eigenvektoren gefunden.\\
+Beweis durch Widerspruch:\\
+Angenommen, es g''abe einen Eigenwert $\nu=n+\alpha$ mit $0<\alpha<1$ und $n \in \mathbbm{N}_0$, d.h.
+\begin{equation}
+	\hat n|\nu\rangle = (n+\alpha) |\nu\rangle.
+\end{equation}
+Wegen $\hat a |\nu \rangle = \sqrt{\nu} |\nu-1\rangle$:
+\begin{align}
+	&\hat n (\hat a^n) |\rangle = \alpha (\hat a^n) |\nu\rangle\\
+	&\hat n(\hat a^{n+1})|\nu \rangle = (\alpha-1)(\hat a^{n+1})|\nu \rangle.
+\end{align}
+$\Rightarrow$ Es g``abe Eigenvektoren von $\hat n$ mit endlicher Norm und negativen Eigenwerten. %$\lightning$ 
+Widerspruch: Eigenwerte sind positiv \section{drehimpuls}
+\label{sec:drehimpuls}
+(s.o.).
+
+F''ur die Energieeigenwerte des harmonischen Oszillators erhalten wir:
+\begin{equation}
+	E = \hbar \omega \left(n+\frac{1}{2}\right).
+\end{equation}
+$|0 \rangle$ hei``st Grundzustand, $|\nu \rangle$ hei''st $\nu$-ter angeregter Zustand. 
+
+Die Operatoren $\hat a^+$ bzw. $\hat a$ erh``ohen bzw. erniedrigen den Energieeigenwert um $\hbar \omega$ und
+werden deshalb Erzeugungs- und Vernichtungsoperator genannt (auch Leiteroperatoren).
